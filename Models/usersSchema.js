@@ -46,5 +46,13 @@ const usersSchema = new mongoose.Schema({
     location: {
         type: String,
         required: true,
-    }
-})
+    },
+    dateCreated:Date,
+    dateUpdated:Date
+});
+
+// model
+
+const users = new mongoose.model("users",usersSchema);
+
+module.exports = users;
